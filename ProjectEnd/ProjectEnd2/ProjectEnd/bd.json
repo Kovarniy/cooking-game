@@ -1,0 +1,25 @@
+
+{
+  "dish" : [
+    {"id": "0","dishName":  "csezar" ,"description": "Салат Цезарь"},
+    {"id": "1","dishName": "zakusochniy salat", "description": "Закусочный салат"},
+    {"id": "2","dishName":  "Olivie", "description":  "Оливье"},
+    {"id": "3","dishName":  "Zimniy salat", "description": "Зимний салат" }
+  ],
+  "indigrodients": [
+    {"name": "chees", "link": "img/chees.jpg"},
+    {"name": "chiken", "link": "img/chees.jpg"},
+    {"name": "salat", "link": "img/salat.jpg"},
+    {"name": "tomato", "link": "img/tomato.jpg"},
+    {"name": "sous", "link": "img/sous.jpg"},
+    {"name": "ogur", "link": "img/ogyrtsy.jpg"},
+    {"name": "colba", "link": "img/kolbasa.jpg"},
+    {"name": "potato", "link": "img/potato.jpg"},
+    {"name": "carot", "link": "img/carot.jpg"},
+    {"name": "marin_ogur", "link": "img/Solenye-ogurtsy.jpg"},
+    {"name": "goroh", "link": "img/gorog.jpg"},
+    {"name": "egg", "link": "img/egg.jpg"},
+    {"name": "seld", "link": "img/seledka.jpg"},
+    {"name": "maionez", "link": "img/mazik.jpg"}
+  ]
+}
