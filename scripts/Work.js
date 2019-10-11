@@ -63,18 +63,18 @@ function dish(jsonObj) {
     *  Тип данных МНОЖЕСТВО выбранно для того,
     *  что бы на экран дважды не добавлялся один и тот же индигридиент
     */
-    var trueIndig = new Set();
+
     /*
     *    Подбираем позиции для индигридиентов из, которых мы будим готовить
     *  Подбор осушествляется до тех пор пока не будут придуманы индивидуальные номера для всех индигридиентов
     */
-    while (trueIndig.size < colIndigr[item]) {
-        trueIndig.add(getRandomArbitrary(0, 9));
+    while (сhoiceIndig.size < colIndigr[item]) {
+        сhoiceIndig.add(getRandomArbitrary(0, 9));
     }
-    console.log( trueIndig);
+    console.log( сhoiceIndig);
 
-    сhoiceIndig(trueIndig);
-
+    var trueIndig = new Set(сhoiceIndig);
+    
     var flag = false;
     /*Выводим список индигридиентов на экран */
     for (i = 0; i < 9; i++ ){
@@ -110,7 +110,6 @@ function dish(jsonObj) {
             } while (!flag)
         }
     }
-    console.log( trueIndig);
 }
 
 /* рандомное число*/
@@ -124,7 +123,7 @@ function addToSalad(salad_Id) {
 }
 
 function compareIndigs() {
-    console.log(сhoiceIndig);
+    console.log(trueIndig);
 
     for(i=0; i < trueIndig.size; i++ ){
        // usersIndigs[]
