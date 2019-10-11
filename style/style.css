@@ -1,3 +1,22 @@
 input:active{
-    background-color: rgba(237, 193, 127, 0.2);
+   /* background-color: rgba(237, 193, 127, 0.2);
+    border: 5px solid #EDC17F;*/
 }
+
+#rar, .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.view .mask{
+    width: 204px;
+    height: 204px;
+    opacity: 0;
+    background-color: rgba(58, 1, 132, 0.44);
+}
+.view:hover .mask {
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+
