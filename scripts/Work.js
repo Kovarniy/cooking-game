@@ -123,20 +123,19 @@ function addToSalad(salad_Id) {
 }
 
 function compareIndigs() {
-    console.log(сhoiceIndig);
-
     //Перебор значений в множестве
     for(let item of сhoiceIndig){
-        if (usersIndigs[item] == false)
+        if (usersIndigs[item] == false){
             alert("Не хватает ингредиентов!");
-    }
-
-    for(i=0;i<usersIndigs.length;i++){
-        if (!сhoiceIndig.has(usersIndigs[i])){
-            alert("Ты неправильно приготовил блюдо!");
+            return;
         }
     }
 
-
+    for(i=0;i<usersIndigs.length;i++) {
+        if (!сhoiceIndig.has(usersIndigs[i])) {
+            alert("Ты неправильно приготовил блюдо!");
+            return;
+        }
+    }
 }
 
