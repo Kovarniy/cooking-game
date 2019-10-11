@@ -122,13 +122,15 @@ function getRandomArbitrary(min, max) {
 
 /*Индигридиенты, которые выбрал пользователь*/
 function addToSalad(salad_Id) {
-    console.log(usersIndigs[0], usersIndigs[1]);
-
-
     usersIndigs[salad_Id] = !usersIndigs[salad_Id];
+}
+
+function compareIndigs() {
+    console.log(trueIndig);
+    for(i=0; i < usersIndigs.length; i++ ){
+        alert(i);
+    }
 
 
-    console.log(usersIndigs[0], usersIndigs[1]);
-    return false;
 }
 
