@@ -15,7 +15,7 @@ var colIndigr = [];
 var usersIndigs = [false, false, false, false, false, false, false, false, false];
 //new Array(len).fill(false); Данный метод не работает в IE
 //Множество нужных индигридиентов, для сравнения
-var сhoiceIndig = new Set(trueIndig);
+var сhoiceIndig = new Set();
 
 $(function() {
     $.getJSON('bd.json')
