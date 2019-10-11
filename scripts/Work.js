@@ -11,14 +11,19 @@ var dishName = [];
 var description = [];
 var colIndigr = [];
 
+/*Индигридиенты, которые выбрал пользователь*/
+var usersIndigs = [false, false, false, false, false, false, false, false, false];
+
+//new Array(len).fill(false); Данный метод не работает в IE
 
 $(function() {
+    console.log(usersIndigs[0], usersIndigs[1]);
+
     $.getJSON('bd.json')
         .done(dish);
 });
 
 function dish(jsonObj) {
-
     /* выгрузка блюд*/
     $(jsonObj.dish).each(function (index) {
         dishId[index] = $(this).attr('id');
@@ -31,27 +36,7 @@ function dish(jsonObj) {
     item = getRandomArbitrary(0,4);
     /* Какой салат нужно готовить?*/
     $('.resept').text('Приготовь мне: ' + description[item]);
-
-    /*
-    switch (item) {
-        case 0:
-            $('.resept').text('Приготовь мне: ' + description[1]);
-            break;
-        case 1:
-            $('.resept').text('Приготовь мне: ' + description[1]);
-            break;
-        case 2:
-            $('.resept').text('Приготовь мне: ' + description[2]);
-            break;
-        case 3:
-            $('.resept').text('Приготовь мне: ' + description[3]);
-            break;
-        default:
-            alert("ошибка");
-    }*/
-
-    //console.log(dishName[item]);
-
+    
     var idCoock = 0;
     var idAll = 0;
     /* выгрузка ингридиентов*/
@@ -76,16 +61,17 @@ function dish(jsonObj) {
    // console.log(coockIndig);
     //console.log(allIndig);
 
-    /* Множество бдующих номеров индигридиентов для блюд*/
-    /* Тип данных МНОЖЕСТВО выбранно для того,
-    *  что бы на экран дважды не добавлялся один и тот же индигридиент*/
+    /*
+    *  Множество номеров, для подходящих индигридиентов
+    *  Тип данных МНОЖЕСТВО выбранно для того,
+    *  что бы на экран дважды не добавлялся один и тот же индигридиент
+    */
     let trueIndig = new Set();
 
-    /* Подбираем позиции для индигридиентов, которые мы будим готовить
+    /*
+    *    Подбираем позиции для индигридиентов из, которых мы будим готовить
     *  Подбор осушествляется до тех пор пока не будут придуманы индивидуальные номера для всех индигридиентов
-    * */
-
-
+    */
     while (trueIndig.size < colIndigr[item]) {
         trueIndig.add(getRandomArbitrary(0, 9));
     }
@@ -97,7 +83,6 @@ function dish(jsonObj) {
         /*Если ПИЗИЦИЯ индигридиента есть в множестве
         * то на её место ставим подходящий для салата индигридиент
         * */
-
         if( trueIndig.has(i) ){
             console.log(i + ' есть');
             /* Если эта позиция занята нужным индигредиентом,
@@ -117,7 +102,7 @@ function dish(jsonObj) {
             /* иначе выберем случайный индигредиент из не нужных*/
             do {
                 idCoock = getRandomArbitrary(0, allImg.length);
-
+                
                 if ( allImg[idCoock] != 'false' ){
                     console.log( "   ", allImg[idCoock]);
                     $('#'+i).attr('src', allImg[idCoock]);
@@ -127,12 +112,22 @@ function dish(jsonObj) {
             } while (!flag)
         }
     }
-
-
+    
 }
 
 /* рандомное число*/
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
+}
+
+/*Индигридиенты, которые выбрал пользователь*/
+function addToSalad(salad_Id) {
+    console.log(usersIndigs[0], usersIndigs[1]);
+    alert(usersIndigs[salad_Id]);
+
+    usersIndigs[salad_Id] = !usersIndigs[salad_Id];
+
+    alert(usersIndigs[salad_Id]);
+    console.log(usersIndigs[0], usersIndigs[1]);
 }
 
