@@ -32,7 +32,23 @@ function dish(jsonObj) {
     /* Какой салат нужно готовить?*/
     $('.resept').text('Приготовь мне: ' + description[item]);
 
- 
+    /*
+    switch (item) {
+        case 0:
+            $('.resept').text('Приготовь мне: ' + description[1]);
+            break;
+        case 1:
+            $('.resept').text('Приготовь мне: ' + description[1]);
+            break;
+        case 2:
+            $('.resept').text('Приготовь мне: ' + description[2]);
+            break;
+        case 3:
+            $('.resept').text('Приготовь мне: ' + description[3]);
+            break;
+        default:
+            alert("ошибка");
+    }*/
 
     //console.log(dishName[item]);
 
@@ -97,7 +113,7 @@ function dish(jsonObj) {
                 } else flag = false;
             } while (!flag)
         } else{
-            console.log(i + ' нет');
+            console.log(i + 'нет');
             /* иначе выберем случайный индигредиент из не нужных*/
             do {
                 idCoock = getRandomArbitrary(0, allImg.length);
