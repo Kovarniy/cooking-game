@@ -125,7 +125,7 @@ function addToSalad(salad_Id) {
 function compareIndigs() {
     console.log(сhoiceIndig);
 
-    for(i=0; i < trueIndig.size; i++ ){
+    for(i=0; i < сhoiceIndig.size; i++ ){
        // usersIndigs[]
     }
 }
