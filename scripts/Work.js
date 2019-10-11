@@ -13,11 +13,8 @@ var colIndigr = [];
 
 
 $(function() {
-    //alert("hi");
-
     $.getJSON('bd.json')
         .done(dish);
-
 });
 
 function dish(jsonObj) {
@@ -33,22 +30,9 @@ function dish(jsonObj) {
     /* Номер солата */
     item = getRandomArbitrary(0,4);
     /* Какой салат нужно готовить?*/
-    switch (item) {
-        case 0:
-            $('.resept').text('Приготовь мне: ' + description[0]);
-            break;
-        case 1:
-            $('.resept').text('Приготовь мне: ' + description[1]);
-            break;
-        case 2:
-            $('.resept').text('Приготовь мне: ' + description[2]);
-            break;
-        case 3:
-            $('.resept').text('Приготовь мне: ' + description[3]);
-            break;
-        default:
-            alert("ошибка");
-    }
+    $('.resept').text('Приготовь мне: ' + description[item]);
+
+ 
 
     //console.log(dishName[item]);
 
