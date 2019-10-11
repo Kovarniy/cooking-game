@@ -129,5 +129,6 @@ function addToSalad(salad_Id) {
 
 
     console.log(usersIndigs[0], usersIndigs[1]);
+    return false;
 }
 
