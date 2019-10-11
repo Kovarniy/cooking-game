@@ -74,7 +74,7 @@ function dish(jsonObj) {
     console.log( сhoiceIndig);
 
     var trueIndig = new Set(сhoiceIndig);
-    
+
     var flag = false;
     /*Выводим список индигридиентов на экран */
     for (i = 0; i < 9; i++ ){
@@ -123,7 +123,7 @@ function addToSalad(salad_Id) {
 }
 
 function compareIndigs() {
-    console.log(trueIndig);
+    console.log(сhoiceIndig);
 
     for(i=0; i < trueIndig.size; i++ ){
        // usersIndigs[]
