@@ -13,12 +13,16 @@ var colIndigr = [];
 
 /*Индигридиенты, которые выбрал пользователь*/
 var usersIndigs = [false, false, false, false, false, false, false, false, false];
-
 //new Array(len).fill(false); Данный метод не работает в IE
 
-$(function() {
-    console.log(usersIndigs[0], usersIndigs[1]);
+/*
+*  Множество номеров, для подходящих индигридиентов
+*  Тип данных МНОЖЕСТВО выбранно для того,
+*  что бы на экран дважды не добавлялся один и тот же индигридиент
+*/
+var trueIndig = new Set();
 
+$(function() {
     $.getJSON('bd.json')
         .done(dish);
 });
@@ -57,16 +61,6 @@ function dish(jsonObj) {
         }
 
     });
-
-   // console.log(coockIndig);
-    //console.log(allIndig);
-
-    /*
-    *  Множество номеров, для подходящих индигридиентов
-    *  Тип данных МНОЖЕСТВО выбранно для того,
-    *  что бы на экран дважды не добавлялся один и тот же индигридиент
-    */
-    var trueIndig = new Set();
 
     /*
     *    Подбираем позиции для индигридиентов из, которых мы будим готовить
