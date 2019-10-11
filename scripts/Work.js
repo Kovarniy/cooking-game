@@ -108,7 +108,7 @@ function dish(jsonObj) {
             } while (!flag)
         }
     }
-    return trueIndig;
+    console.log( trueIndig);
 }
 
 /* рандомное число*/
@@ -124,8 +124,8 @@ function addToSalad(salad_Id) {
 function compareIndigs() {
     console.log(trueIndig);
 
-    for(i=0; i < usersIndigs.length; i++ ){
-
+    for(i=0; i < trueIndig.size; i++ ){
+        usersIndigs[]
     }
 }
 
