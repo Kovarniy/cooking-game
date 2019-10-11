@@ -15,7 +15,7 @@ var colIndigr = [];
 var usersIndigs = [false, false, false, false, false, false, false, false, false];
 //new Array(len).fill(false); Данный метод не работает в IE
 
-
+var trueIndig = new Set();
 
 $(function() {
     $.getJSON('bd.json')
@@ -63,7 +63,7 @@ function dish(jsonObj) {
     *  Тип данных МНОЖЕСТВО выбранно для того,
     *  что бы на экран дважды не добавлялся один и тот же индигридиент
     */
-    var trueIndig = new Set();
+
     /*
     *    Подбираем позиции для индигридиентов из, которых мы будим готовить
     *  Подбор осушествляется до тех пор пока не будут придуманы индивидуальные номера для всех индигридиентов
@@ -123,10 +123,9 @@ function addToSalad(salad_Id) {
 
 function compareIndigs() {
     console.log(trueIndig);
+
     for(i=0; i < usersIndigs.length; i++ ){
-        alert(i);
+
     }
-
-
 }
 
