@@ -1,0 +1,26 @@
+
+{
+  "dish" : [
+    {"id": "0","dishName":  "csezar" ,"description": "Салат Цезарь", "colIndigr": "5"},
+    {"id": "1","dishName": "zakusochniy_salat", "description": "Закусочный салат", "colIndigr": "4"},
+    {"id": "2","dishName":  "Olivie", "description":  "Оливье", "colIndigr": "7"},
+    {"id": "3","dishName":  "seledkaTshort", "description": "Селедку под шубой", "colIndigr": "6"}
+  ],
+  "indigrodients": [
+    {"name": "cheese", "link": "img/cheese.jpg",                "csezar": "true" ,"zakusochniy_salat": "true", "Olivie": "false", "seledkaTshort": "false" },
+    {"name": "chicken", "link": "img/chicken.jpg",               "csezar": "true" ,"zakusochniy_salat": "false", "Olivie": "false", "seledkaTshort": "false"  },
+    {"name": "salad", "link": "img/salad.jpg",                "csezar": "true" ,"zakusochniy_salat": "false", "Olivie": "false", "seledkaTshort": "false"  },
+    {"name": "tomato", "link": "img/tomato.jpg",              "csezar": "true" ,"zakusochniy_salat": "false", "Olivie": "false", "seledkaTshort": "false"  },
+    {"name": "sauce", "link": "img/sauce.jpg",                  "csezar": "true" ,"zakusochniy_salat": "false", "Olivie": "false", "seledkaTshort": "false"  },
+    {"name": "cucumber", "link": "img/cucumber.jpg",               "csezar": "false" ,"zakusochniy_salat": "true", "Olivie": "false", "seledkaTshort": "false"  },
+    {"name": "sausage", "link": "img/sausage.jpg",              "csezar": "false" ,"zakusochniy_salat": "true", "Olivie": "true", "seledkaTshort": "false"  },
+    {"name": "potato", "link": "img/potato.jpg",              "csezar": "false" ,"zakusochniy_salat": "false", "Olivie": "true", "seledkaTshort": "true"  },
+    {"name": "carrot", "link": "img/carrot.jpg",                "csezar": "false" ,"zakusochniy_salat": "false", "Olivie": "true", "seledkaTshort": "true"  },
+    {"name": "cucumberSol", "link": "img/cucumberSol.jpg", "csezar": "false" ,"zakusochniy_salat": "false", "Olivie": "true", "seledkaTshort": "false"  },
+    {"name": "peas", "link": "img/peas.jpg",                "csezar": "false" ,"zakusochniy_salat": "false", "Olivie": "true", "seledkaTshort": "false"  },
+    {"name": "egg", "link": "img/egg.jpg",                    "csezar": "false" ,"zakusochniy_salat": "false", "Olivie": "true", "seledkaTshort": "true"  },
+    {"name": "seledka", "link": "img/seledka.jpg",               "csezar": "false" ,"zakusochniy_salat": "false", "Olivie": "false", "seledkaTshort": "true" },
+    {"name": "mayonnaise", "link": "img/mayonnaise.jpg",              "csezar": "false" ,"zakusochniy_salat": "true", "Olivie": "true", "seledkaTshort": "true"  },
+    {"name": "svekla", "link": "img/svekla.jpg",              "csezar": "false" ,"zakusochniy_salat": "false", "Olivie": "false", "seledkaTshort": "true"  }
+  ]
+}
