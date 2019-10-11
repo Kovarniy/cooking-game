@@ -123,11 +123,11 @@ function getRandomArbitrary(min, max) {
 /*Индигридиенты, которые выбрал пользователь*/
 function addToSalad(salad_Id) {
     console.log(usersIndigs[0], usersIndigs[1]);
-    alert(usersIndigs[salad_Id]);
+
 
     usersIndigs[salad_Id] = !usersIndigs[salad_Id];
 
-    alert(usersIndigs[salad_Id]);
+
     console.log(usersIndigs[0], usersIndigs[1]);
 }
 
