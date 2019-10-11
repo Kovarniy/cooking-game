@@ -125,7 +125,7 @@ function compareIndigs() {
     console.log(trueIndig);
 
     for(i=0; i < trueIndig.size; i++ ){
-        usersIndigs[]
+       // usersIndigs[]
     }
 }
 
