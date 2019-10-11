@@ -3,7 +3,7 @@ input:active{
     border: 5px solid #EDC17F;*/
 }
 
-#rar, .mask {
+input, .mask {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,3 +20,14 @@ input:active{
     transition: all 0.4s ease-in-out;
 }
 
+h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 27px;
+    font-family: Raleway, serif;
+    padding: 25px;
+
+    margin: 60px 0 0 0
+}

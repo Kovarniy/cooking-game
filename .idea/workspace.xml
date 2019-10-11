@@ -17,13 +17,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>getRandomArbitrary</find>
-      <find>console</find>
-      <find>kolbasa</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -69,7 +62,7 @@
       <workItem from="1559190279193" duration="6252000" />
       <workItem from="1559231515171" duration="2689000" />
       <workItem from="1559263114517" duration="16466000" />
-      <workItem from="1570757671270" duration="13038000" />
+      <workItem from="1570757671270" duration="14015000" />
     </task>
     <servers />
   </component>
