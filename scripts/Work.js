@@ -108,7 +108,7 @@ function dish(jsonObj) {
             } while (!flag)
         }
     }
-    
+    return trueIndig;
 }
 
 /* рандомное число*/
