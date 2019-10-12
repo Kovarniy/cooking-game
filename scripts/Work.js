@@ -17,10 +17,31 @@ var usersIndigs = [false, false, false, false, false, false, false, false, false
 //Множество нужных индигридиентов, для сравнения
 var сhoiceIndig = new Set();
 
+var indigs = [];
+
 $(function() {
+    for (i=0;i < 10;i++) {
+        indigs[i] = document.getElementById(i);
+        indigs[i].onclick = addToSalad;
+    }
     $.getJSON('bd.json')
         .done(dish);
 });
+
+/*Индигридиенты, которые выбрал пользователь*/
+function addToSalad() {
+    salad_Id = this.getAttribute("id");
+    usersIndigs[salad_Id] = !usersIndigs[salad_Id];
+    //this.className = "chooseIndigs";
+
+    hnode = this.childNodes[3];
+    hnode.classList.add('chooseIndigs');
+    htext = this.childNodes[4];
+    htext.classList.add('h2');
+  //  hh2.className = "main, chooseIndigs";
+    hh2.textContent = "Выбрано";
+
+}
 
 function dish(jsonObj) {
     /* выгрузка блюд*/
@@ -115,14 +136,6 @@ function dish(jsonObj) {
 /* рандомное число*/
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
-}
-
-/*Индигридиенты, которые выбрал пользователь*/
-function addToSalad(salad_Id) {
-    console.log("click");
-    alert("click!");
-    usersIndigs[salad_Id] = !usersIndigs[salad_Id];
-    $(this).h2.text("Выбрано");
 }
 
 function compareIndigs() {

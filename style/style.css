@@ -53,7 +53,9 @@ input, .mask {
 }
 
 .chooseIndigs{
-
+    opacity: 1;
+    background-color: rgba(212, 0, 5, 0.51);
+    transition: all 0.4s ease-in-out;
 }
 
 h2 {
