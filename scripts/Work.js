@@ -32,14 +32,17 @@ $(function() {
 function addToSalad() {
     salad_Id = this.getAttribute("id");
     usersIndigs[salad_Id] = !usersIndigs[salad_Id];
-    //this.className = "chooseIndigs";
-
     hnode = this.childNodes[3];
-    hnode.classList.add('chooseIndigs');
-    htext = this.childNodes[4];
-    htext.classList.add('h2');
-  //  hh2.className = "main, chooseIndigs";
-    hh2.textContent = "Выбрано";
+    htext = hnode.childNodes[1];
+
+    if (usersIndigs[salad_Id] == true){
+        hnode.classList.add('chooseIndigs');
+        htext.innerHTML = "Выбрано";
+    } else {
+        hnode.classList.remove('chooseIndigs');
+        htext.innerHTML = "Выбрать";
+    }
+
 
 }
 
