@@ -145,14 +145,13 @@ function compareIndigs() {
     //Перебор значений в множестве
     for(let item of сhoiceIndig){
         if (usersIndigs[item] == false){
-            alert("Не хватает ингредиентов!");
+            $('.resept').text('Не хватает ингредиентов!');
             return;
         }
     }
-
     for(i=0;i<usersIndigs.length;i++) {
         if (!сhoiceIndig.has(usersIndigs[i])) {
-            alert("Ты неправильно приготовил блюдо!");
+            $('.resept').text('Ты неправильно приготовил блюдо!');
             return;
         }
     }
