@@ -12,7 +12,7 @@ var description = [];
 var colIndigr = [];
 
 /*Индигридиенты, которые выбрал пользователь*/
-var usersIndigs = [false, false, false, false, false, false, false, false, false];
+var usersIndigs = [false, false, false, false, false, false, false, false, false, false];
 //new Array(len).fill(false); Данный метод не работает в IE
 //Множество нужных индигридиентов, для сравнения
 var сhoiceIndig = new Set();
@@ -77,7 +77,7 @@ function dish(jsonObj) {
 
     var flag = false;
     /*Выводим список индигридиентов на экран */
-    for (i = 0; i < 9; i++ ){
+    for (i = 0; i < 10; i++ ){
         /*Если ПИЗИЦИЯ индигридиента есть в множестве
         * то на её место ставим подходящий для салата индигридиент
         * */
