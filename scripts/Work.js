@@ -119,6 +119,7 @@ function getRandomArbitrary(min, max) {
 
 /*Индигридиенты, которые выбрал пользователь*/
 function addToSalad(salad_Id) {
+    console.log("click");
     alert("click!");
     usersIndigs[salad_Id] = !usersIndigs[salad_Id];
     $(this).h2.text("Выбрано");

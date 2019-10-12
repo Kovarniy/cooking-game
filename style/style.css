@@ -16,7 +16,8 @@ h1{
 }
 
 .blocks{
-    width: 1120px;
+    max-width: 1120px;
+    max-height: 700px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
