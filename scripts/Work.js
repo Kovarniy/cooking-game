@@ -71,7 +71,7 @@ function dish(jsonObj) {
         //console.log( $(this).attr('name') + "   " + $(this).attr(dishName[item]) );
         if( $(this).attr(dishName[item]) == 'true' ){
             coockIndig[idCoock] = $(this).attr('name');
-            console(" coockIndig == " + coockIndig[idCoock] );
+            console.log(" coockIndig == " + coockIndig[idCoock] );
             coockImg[idCoock] = $(this).attr('link');
             idCoock++;
         } else {
