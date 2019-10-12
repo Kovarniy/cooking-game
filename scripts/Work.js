@@ -113,7 +113,7 @@ function dish(jsonObj) {
                 idCoock = getRandomArbitrary(0, coockImg.length);
                 if ( coockImg[idCoock] != 'false' ){
                     console.log( "   ", coockImg[idCoock]);
-                    $('#'+i).attr('src', coockImg[idCoock]);
+                    $('#'+i+'i').attr('src', coockImg[idCoock]);
                     coockImg[idCoock] = 'false';
                     trueIndig.delete(i);
                     flag = true;
@@ -127,7 +127,7 @@ function dish(jsonObj) {
                 
                 if ( allImg[idCoock] != 'false' ){
                     console.log( "   ", allImg[idCoock]);
-                    $('#'+i).attr('src', allImg[idCoock]);
+                    $('#'+i+'i').attr('src', allImg[idCoock]);
                     allImg[idCoock] = 'false';
                     flag = true;
                 } else flag = false;
