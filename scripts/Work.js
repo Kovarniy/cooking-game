@@ -158,6 +158,7 @@ console.log(сhoiceIndig);
     }
 
 
+    console.log("len = " + usersIndigs.length);
     for(i=0;i<usersIndigs.length;i++) {
         console.log(сhoiceIndig.has(usersIndigs[i]));
         if ( сhoiceIndig.has(usersIndigs[i]) ) {
