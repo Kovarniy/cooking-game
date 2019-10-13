@@ -142,6 +142,9 @@ function getRandomArbitrary(min, max) {
 }
 
 function compareIndigs() {
+console.log(сhoiceIndig);
+    console.log(usersIndigs);
+
     //Перебор значений в множестве
     for(let item of сhoiceIndig){
         if (usersIndigs[item] == false){
@@ -155,7 +158,7 @@ function compareIndigs() {
     }
 
     for(i=0;i<usersIndigs.length;i++) {
-        if (сhoiceIndig.has(usersIndigs[i])) {
+        if ( сhoiceIndig.has(usersIndigs[i]) ) {
             $('.resept').text('Ты неправильно приготовил блюдо!');
             return;
         }
