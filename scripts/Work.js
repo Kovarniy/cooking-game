@@ -145,13 +145,15 @@ function compareIndigs() {
 console.log(сhoiceIndig);
     console.log(usersIndigs);
 
+    var i = 0;
     //Перебор значений в множестве
     for(let item of сhoiceIndig){
         if (usersIndigs[item] == false){
             $('.resept').text('Не хватает ингредиентов!');
             break;
         }
-        if (item == сhoiceIndig.size - 1) {
+        i++;
+        if (i == сhoiceIndig.size - 1) {
             $('.resept').text('Из тебя получится хороший повар!');
             break;
         }
