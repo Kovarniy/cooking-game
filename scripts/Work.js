@@ -95,7 +95,7 @@ function dish(jsonObj) {
     while (сhoiceIndig.size < colIndigr[item]) {
         сhoiceIndig.add(getRandomArbitrary(0, 9));
     }
-    console.log( сhoiceIndig);
+  //  console.log( сhoiceIndig);
 
     var trueIndig = new Set(сhoiceIndig);
 
@@ -106,13 +106,13 @@ function dish(jsonObj) {
         * то на её место ставим подходящий для салата индигридиент
         * */
         if( trueIndig.has(i) ){
-            console.log(i + ' есть');
+           // console.log(i + ' есть');
             /* Если эта позиция занята нужным индигредиентом,
             то выберем случайный индигредиент из нужных*/
             do {
                 idCoock = getRandomArbitrary(0, coockImg.length);
                 if ( coockImg[idCoock] != 'false' ){
-                    console.log( "   ", coockImg[idCoock]);
+                   // console.log( "   ", coockImg[idCoock]);
                     $('#'+i+'i').attr('src', coockImg[idCoock]);
                     coockImg[idCoock] = 'false';
                     trueIndig.delete(i);
@@ -126,7 +126,7 @@ function dish(jsonObj) {
                 idCoock = getRandomArbitrary(0, allImg.length);
                 
                 if ( allImg[idCoock] != 'false' ){
-                    console.log( "   ", allImg[idCoock]);
+                   // console.log( "   ", allImg[idCoock]);
                     $('#'+i+'i').attr('src', allImg[idCoock]);
                     allImg[idCoock] = 'false';
                     flag = true;
@@ -148,9 +148,14 @@ function compareIndigs() {
             $('.resept').text('Не хватает ингредиентов!');
             return;
         }
+        if (item == сhoiceIndig.size) {
+            $('.resept').text('Из тебя получится хороший повар!');
+            return;
+        }
     }
+
     for(i=0;i<usersIndigs.length;i++) {
-        if (!сhoiceIndig.has(usersIndigs[i])) {
+        if (сhoiceIndig.has(usersIndigs[i])) {
             $('.resept').text('Ты неправильно приготовил блюдо!');
             return;
         }
