@@ -149,23 +149,21 @@ console.log(сhoiceIndig);
     for(let item of сhoiceIndig){
         if (usersIndigs[item] == false){
             $('.resept').text('Не хватает ингредиентов!');
-            return;
+            break;
         }
         if (item == сhoiceIndig.size) {
             $('.resept').text('Из тебя получится хороший повар!');
-            return;
+            break;
         }
     }
 
     console.log("len = " + usersIndigs.length);s
     for(i=0;i<usersIndigs.length;i++) {
         console.log("hi");
-        if ( сhoiceIndig.has(usersIndigs[i]) ) {
+        if ( !сhoiceIndig.has(usersIndigs[i]) ) {
             $('.resept').text('Ты неправильно приготовил блюдо!');
-
-        } else{
-            console.log("такого индигридиента нет");
-        }
+            break;
+        } 
     }
 }
 
