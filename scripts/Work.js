@@ -151,7 +151,7 @@ console.log(сhoiceIndig);
             $('.resept').text('Не хватает ингредиентов!');
             break;
         }
-        if (item == сhoiceIndig.size) {
+        if (item == сhoiceIndig.size - 1) {
             $('.resept').text('Из тебя получится хороший повар!');
             break;
         }
