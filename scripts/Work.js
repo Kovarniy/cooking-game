@@ -157,7 +157,7 @@ console.log(сhoiceIndig);
         }
     }
 
-    console.log("len = " + usersIndigs.length);s
+    console.log("len = " + usersIndigs.length);
     for(i=0;i<usersIndigs.length;i++) {
         console.log("hi");
         if ( !сhoiceIndig.has(usersIndigs[i]) ) {
