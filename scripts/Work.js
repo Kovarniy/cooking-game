@@ -157,13 +157,13 @@ console.log(сhoiceIndig);
         }
     }
 
-    console.log("len = " + usersIndigs.length);s
+
     for(i=0;i<usersIndigs.length;i++) {
-        console.log("hi");
-        if ( !сhoiceIndig.has(usersIndigs[i]) ) {
+        console.log(сhoiceIndig.has(usersIndigs[i]));
+        if ( сhoiceIndig.has(usersIndigs[i]) ) {
             $('.resept').text('Ты неправильно приготовил блюдо!');
             break;
-        } 
+        }
     }
 }
 
