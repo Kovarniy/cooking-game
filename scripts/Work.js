@@ -161,6 +161,8 @@ console.log(сhoiceIndig);
         if ( сhoiceIndig.has(usersIndigs[i]) ) {
             $('.resept').text('Ты неправильно приготовил блюдо!');
             return;
+        } else{
+            console.log("такого индигридиента нет");
         }
     }
 }
